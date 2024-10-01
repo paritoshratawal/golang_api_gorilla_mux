@@ -2,6 +2,7 @@ package config
 
 import (
 	"fmt"
+	"log"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -30,7 +31,7 @@ func Connect(config *Config) {
 	if err != nil {
 		panic(err)
 	} else {
-		fmt.Println("DB connection......")
+		log.Println("DB connection successful......")
 	}
 	db = d
 }
